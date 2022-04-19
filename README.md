@@ -26,3 +26,7 @@ dx/dt= αx( 1 - x/K) - βy
 
 dy/dt= y (−δ + γx)
 
+This Package requires following external libraries: 
+
+•	NumPy (see http://www.numpy.org)
+•	matplotlib (see http://matplotlib.org/)
