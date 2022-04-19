@@ -29,4 +29,5 @@ dy/dt= y (−δ + γx)
 This Package requires following external libraries: 
 
 •	NumPy (see http://www.numpy.org)
+
 •	matplotlib (see http://matplotlib.org/)
