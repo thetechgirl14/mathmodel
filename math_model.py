@@ -66,10 +66,8 @@ class Lotka_Volterra(object):
         """Integration of Lotka-Volterra system assuming logistic growth"""
 
         for i in range(self.n - 1):
-            self.d_predator[i] = self.predator[i] * (
-                        self.predgrow * self.prey[i] * (1.0 - self.predator[i] / self.predator_capacity) - self.preddie)
-            self.d_prey[i] = self.prey[i] * self.preygrow * (1.0 - self.prey[i] / self.prey_capacity) - self.prey[i] * \
-                             self.predator[i] * self.preydie
+            self.d_predator[i] = self.predator[i] * (self.predgrow * (1.0 - self.predator[i] / self.predator_capacity) - self.preddie* self.prey[i])
+            self.d_prey[i] = self.prey[i] * (self.preygrow - self.predator[i] * self.preydie)
             self.time[i + 1] = self.time[i] + self.dt
             self.predator[i + 1] = self.predator[i] + self.dt * self.d_predator[i]
             self.prey[i + 1] = self.prey[i] + self.dt * self.d_prey[i]
@@ -78,10 +76,8 @@ class Lotka_Volterra(object):
         """Integration of vanilla Lotka-Volterra system with stochastic predator death rate"""
 
         for i in range(self.n - 1):
-            self.d_predator[i] = self.predator[i] * (
-                        self.predgrow * self.prey[i] - self.preddie * (1 - 0.1) * np.random.rand())
-            self.d_prey[i] = self.prey[i] * (
-                        self.preygrow * (1 - 0.1) * np.random.rand() - self.predator[i] * self.preydie)
+            self.d_predator[i] = self.predator[i] * (self.predgrow * self.prey[i] - self.preddie * (1 - 0.1) * np.random.rand())
+            self.d_prey[i] = self.prey[i] * (self.preygrow * (1 - 0.1) * np.random.rand() - self.predator[i] * self.preydie)
             self.time[i + 1] = self.time[i] + self.dt
             self.predator[i + 1] = self.predator[i] + self.dt * self.d_predator[i]
             self.prey[i + 1] = self.prey[i] + self.dt * self.d_prey[i]
