@@ -122,18 +122,3 @@ class Lotka_Volterra(object):
         ax2.set_title("Phase space")
         ax2.grid()
         plt.show()
-
-
-if __name__ == "__main__":
-    predgrow = 0.5  # growth rate of the predator -> delta
-    preddie = 0.25  # predator death rate -> gamma
-    preygrow = 1  # prey growth rate -> alpha
-    preydie = 0.5  # prey death rate -> beta
-    tmax = 5  # max time limit
-    timestep = 0.1  # delta time
-
-    pred_zero, prey_zero = 10, 10
-
-    lv = Lotka_Volterra(predgrow, preddie, preygrow, preydie, tmax, timestep)
-    lv.set_initial_conditions(pred_zero, prey_zero)
-    t, x, y = lv.system()
