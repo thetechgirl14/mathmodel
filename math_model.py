@@ -72,16 +72,6 @@ class Lotka_Volterra(object):
             self.predator[i + 1] = self.predator[i] + self.dt * self.d_predator[i]
             self.prey[i + 1] = self.prey[i] + self.dt * self.d_prey[i]
 
-    def system_stochastic(self):
-        """Integration of vanilla Lotka-Volterra system with stochastic predator death rate"""
-
-        for i in range(self.n - 1):
-            self.d_predator[i] = self.predator[i] * (self.predgrow * self.prey[i] - self.preddie * (1 - 0.1) * np.random.rand())
-            self.d_prey[i] = self.prey[i] * (self.preygrow * (1 - 0.1) * np.random.rand() - self.predator[i] * self.preydie)
-            self.time[i + 1] = self.time[i] + self.dt
-            self.predator[i + 1] = self.predator[i] + self.dt * self.d_predator[i]
-            self.prey[i + 1] = self.prey[i] + self.dt * self.d_prey[i]
-
     def plot_populations_vs_time(self, filename='populations_vs_time.png', plot_capacity=False):
         """Plotting both populations vs time"""
 
