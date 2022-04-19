@@ -22,5 +22,6 @@ There are limits imposed by the environment on the maximal possible size of a po
 enough nutrients for a large bacterial culture, insufficient food for the human population of an island, or a small hunting territory for a given animal species. Ecologists talk about the carrying capacity of the environment, a number y with the property that no populations x > y are sustainable. If the population starts bigger than y, the number of individuals will decrease.
 
 dx/dt= αx( 1 - x/K) - βy
+
 dy/dt= y (−δ + γx)
 
