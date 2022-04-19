@@ -4,6 +4,7 @@ This module provides access to model functions for the analysis of Predator-Prey
 
 > **Lotka - Volterra Systems**
 
+In any given environment, every species has a niche which comprises of Abiotic elements, Food source and Habit. When two different species have same niche, they are competitors. It leads to either win/loss, in which case one species wins and other one gets extinct from that particular environment. Or it could lead to partitioning, where one of the species changes something in their niche to co-exist in the environment. When a species survives on another species, The Lotka Volterra model is used to predict the variation in the population with time because of the predatory interaction. 
 The Lotka - Voltera model is the simplest predator-prey model, describes the variation in populations of two species which interact via predation. This is a classical model to represent the dynamic of two populations used to predict changes in both with time.
 
 Let α > 0, β > 0, δ > 0 and γ > 0 . The system is given by:
