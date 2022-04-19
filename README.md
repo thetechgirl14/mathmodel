@@ -19,7 +19,7 @@ A typical solution to this system is given by x and y being periodic and out of 
 >  **Logistic Systems**
 
 There are limits imposed by the environment on the maximal possible size of a population: not
-enough nutrients for a large bacterial culture, insufficient food for the human population of an island, or a small hunting territory for a given animal species. Ecologists talk about the carrying capacity of the environment, a number N with the property that no populations P > N are sustainable. If the population starts bigger than N, the number of individuals will decrease.
+enough nutrients for a large bacterial culture, insufficient food for the human population of an island, or a small hunting territory for a given animal species. Ecologists talk about the carrying capacity of the environment, a number y with the property that no populations x > y are sustainable. If the population starts bigger than y, the number of individuals will decrease.
 
 dx/dt= αx( 1 - x/K) - βy
 dy/dt= y (−δ + γx)
