@@ -49,3 +49,10 @@ This Package requires following external libraries:
 •	NumPy (see http://www.numpy.org)
 
 •	matplotlib (see http://matplotlib.org/)
+
+•	os (see https://docs.python.org/3/library/os.path.html)
+
+• Sys (see https://docs.python.org/3/library/sys.html)
+
+The test code can be used to access the main code for the Lotka-Volterra Model, which is in math model.py in the class Lotka_Volterra. The code that integrates the equations with exponential growth is tested in test_lotka_volterra.py. Chemostat's core source code is written in Chemostat.py in the class Chemostat, and it may be accessed through the Chemostat test.py test file. 
+The test file's parameter values can be adjusted to plot the graph according to the experiment.
