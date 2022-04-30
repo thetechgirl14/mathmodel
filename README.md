@@ -26,6 +26,24 @@ dx/dt= αx( 1 - x/K) - βy
 
 dy/dt= y (−δ + γx)
 
+>  **Chemostat**
+
+The chemostat model is used to determine the type of interaction between two species. If the interaction leads to the model where two microbial species that are in same medium, and they both decline with time, the interaction is a predator-prey type. If one species thrives at the cost of other, it is a competition. The type when, with interaction both the species thrive, is called mutualism. 
+
+With
+V = constant volume of solution in culture chamber 
+F = (constant and equal) flows in vol/sec, e.g. m3/s 
+N(t) = bacterial concentration in mass/vol, e.g. g/m3 
+C0, C(t) = nutrient concentrations in mass/vol (C0 assumed constant)
+Chamber is well-mixed:
+Assuming that growth is proportional to initial population, time intervals and food quantity, the equation is:
+N(t + ∆t) − N(t) due to growth = r(C(t)) N(t) ∆t
+
+The function r(C) is a reasonable choice. Here we have used Vmax/Km 
+When consumption of food is inversely proportional to the population growth the equation is:
+C(t + ∆t) − C(t) due to consumption = −α [N(t + ∆t) − N(t)]
+
+
 This Package requires following external libraries: 
 
 •	NumPy (see http://www.numpy.org)
