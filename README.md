@@ -33,10 +33,10 @@ where N(t) represents the bacterial concentration and C(t) represents the nutrie
 ## Dependencies
 This package requires the following external libraries:
 
-NumPy (http://www.numpy.org)
-matplotlib (http://matplotlib.org/)
-os (https://docs.python.org/3/library/os.path.html)
-sys (https://docs.python.org/3/library/sys.html)
+- [NumPy](http://www.numpy.org)
+- [matplotlib](http://matplotlib.org/)
+- [os](https://docs.python.org/3/library/os.path.html)
+- [sys](https://docs.python.org/3/library/sys.html)
 
 Make sure you have the necessary dependencies installed
 ```
